@@ -62,8 +62,5 @@ function gd_request_scripts() {
 add_action( 'wp_enqueue_scripts', 'gd_request_scripts', 20, 1);
 
 
-
-include 'includes/template_define.php';
+//include 'includes/template_define.php';
 include 'templates/shortcode.php';
-
-
