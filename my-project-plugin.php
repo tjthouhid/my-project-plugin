@@ -64,3 +64,17 @@ add_action( 'wp_enqueue_scripts', 'gd_request_scripts', 20, 1);
 
 //include 'includes/template_define.php';
 include 'templates/shortcode.php';
+
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'plugin_manage_link', 10, 4 );
+
+function plugin_manage_link( $actions, $plugin_file, $plugin_data, $context ) {
+
+    $settings_link = sprintf( '<a href="%s" target="_blank">%s</a>', 'https://www.tjthouhid.com', __( 'Tj Thouhid' ) );
+    array_unshift( $actions, $settings_link );
+    $settings_link = sprintf( '<a href="%s" target="_blank">%s</a>', 'https://github.com/tjthouhid/my-project-plugin', __( 'GitHub' ) );
+    array_unshift( $actions, $settings_link );
+    
+
+    return $actions;
+
+}
