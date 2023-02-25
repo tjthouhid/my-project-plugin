@@ -1,7 +1,7 @@
 <section class="blog-section text-center">
             <div class="row">
                 <div class="small-12 columns">
-                    <h2><i class="fa fa-home" aria-hidden="true"></i> How Can I Beautify My Space?</h2>
+                    <h2><?php echo $h1;?></h2>
                     <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
                         <?php 
                         $args = array(
@@ -30,7 +30,7 @@
                         <?php wp_reset_postdata(); ?>
                         <?php endif; ?>
                     </ul>
-                    <a href="/my-projects/" class="learn-more" title="Tips & Resources">See More Projects</a>
+                    <a href="/my-projects/" class="learn-more" title="Tips & Resources"><?php echo $button;?></a>
                 </div>
             </div>
         </section>
